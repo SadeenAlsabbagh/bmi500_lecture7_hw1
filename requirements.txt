@@ -1,0 +1,5 @@
+# Tested with Python 3.11.3 and numpy 1.26.4 / 2.4.6, scipy 1.17.1, matplotlib 3.11.2
+numpy>=1.26
+matplotlib>=3.8
+scipy>=1.11   # used only to verify the hand-written solvers
+jupyter
