@@ -136,9 +136,11 @@ values nonnegative.
 
 Using the conserved quantity $V(S,I)=S+I-(\gamma/\beta)\ln S$, the analytical peak is:
 
+
 $$
-I_{\mathrm{max}} = I_0 + S_0 - S^{*} - S^{*}\ln\left(\frac{S_0}{S^{*}}\right) = 468.97\ \text{people}.
+I_{\max} = I_0 + S_0 - 800 - 800\ln\left(\frac{S_0}{800}\right) = 468.97 \text{ people}
 $$
+
 
 **[numerical]** The peak occurs at approximately **day 42.544**, with **468.97 infectious people**, estimated using a parabolic fit to the numerical trajectory and checked against the time when $S$ crosses 800. The numerical peak height differs from the analytical result by approximately $9.4\times10^{-6}$ people. A simulation with $h=0.01$ gives a consistent peak time, and the conserved quantity $V$ is preserved to approximately $10^{-8}$.
 
