@@ -132,21 +132,21 @@ values nonnegative.
 
 ### C(i) Infection peak
 
-**[analytical]** $dI/dt=I(\beta S-\gamma)$, so $I$ peaks exactly when
-$S=S^*=\gamma/\beta=800$ people. Using the conserved quantity $V(S,I)=S+I-(\gamma/\beta)\ln S$:
+**[analytical]** The infectious population evolves according to $dI/dt = I(\beta S-\gamma)$, so the infection peak occurs when the susceptible population reaches the threshold $S^{*}=\gamma/\beta=800$ people.
+
+Using the conserved quantity $V(S,I)=S+I-(\gamma/\beta)\ln S$, the analytical peak is:
 
 $$
-I_\text{max}=I_0+S_0-S^*-S^*\ln\frac{S_0}{S^*}=468.97\ \text{people}.
+I_{\mathrm{max}} = I_0 + S_0 - S^{*} - S^{*}\ln\left(\frac{S_0}{S^{*}}\right) = 468.97\ \text{people}.
 $$
 
-**[numerical]** The peak is on **day 42.544**, with $I=$ **468.97** people (from a parabolic fit to the grid, confirmed
-by the time $S$ crosses 800). This differs from the analytical height by $9.4\times10^{-6}$ people. A run with
-$h=0.01$ gives the same day, and $V$ is conserved to $10^{-8}$.
+**[numerical]** The peak occurs at approximately **day 42.544**, with **468.97 infectious people**, estimated using a parabolic fit to the numerical trajectory and checked against the time when $S$ crosses 800. The numerical peak height differs from the analytical result by approximately $9.4\times10^{-6}$ people. A simulation with $h=0.01$ gives a consistent peak time, and the conserved quantity $V$ is preserved to approximately $10^{-8}$.
 
 **What sets the peak.**
-- *Height* depends only on $S_0$, $I_0$ and $S^*=\gamma/\beta$. A larger $R_0$ means $S_0$ is further above the
-  threshold, so more people are infectious at once.
-- *Timing* depends on the early growth rate $r=\beta S_0-\gamma$ and on $I_0$.
+
+- **Height:** In the closed SIR model, the peak height depends on $S_0$, $I_0$, and the threshold $S^{*}=\gamma/\beta$. For fixed initial conditions, a larger $R_0$ lowers this threshold and generally increases the maximum infectious population.
+- **Timing:** The early growth rate $r=\beta S_0-\gamma$ influences when the outbreak develops, but the peak time also depends on how quickly susceptible individuals are depleted throughout the simulation.
+
 
 ### C(ii) Basic reproduction number
 
